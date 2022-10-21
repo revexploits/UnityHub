@@ -180,7 +180,7 @@ local TweenService = game:GetService('TweenService')
 --// CONSTANTS
 local Camera = workspace.CurrentCamera
 local Games = {
-	[9848789324] = 'ragdoll'
+	[9848789324] = 'main/ragdoll'
 }
 
 --// VALUES
