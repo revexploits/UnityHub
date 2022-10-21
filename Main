@@ -1,0 +1,223 @@
+local Unity = Instance.new("ScreenGui")
+local Loader = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local GameThumbnail = Instance.new("ImageLabel")
+local UIGradient = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local Main = Instance.new("Frame")
+local GameName = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local Yes = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Button = Instance.new("TextButton")
+local No = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local Button_2 = Instance.new("TextButton")
+local Shadow = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+Unity.Name = "Unity"
+Unity.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Unity.Enabled = false
+Unity.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Loader.Name = "Loader"
+Loader.Parent = Unity
+Loader.AnchorPoint = Vector2.new(0.5, 0.5)
+Loader.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+Loader.Position = UDim2.new(0.5, 0, 0.5, 0)
+Loader.Size = UDim2.new(0, 400, 0, 200)
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = Loader
+
+GameThumbnail.Name = "GameThumbnail"
+GameThumbnail.Parent = Loader
+GameThumbnail.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameThumbnail.BackgroundTransparency = 1.000
+GameThumbnail.Size = UDim2.new(1, 0, 1, 0)
+GameThumbnail.Image = "https://www.roblox.com/asset-thumbnail/image?assetId=4282985734&width=768&height=432&format=png"
+GameThumbnail.ImageTransparency = 0.800
+GameThumbnail.ScaleType = Enum.ScaleType.Crop
+
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(1.00, 0.54)}
+UIGradient.Parent = GameThumbnail
+
+UICorner_2.CornerRadius = UDim.new(0, 20)
+UICorner_2.Parent = GameThumbnail
+
+Main.Name = "Main"
+Main.Parent = Loader
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.ClipsDescendants = true
+Main.Size = UDim2.new(1, 0, 1, 0)
+
+GameName.Name = "GameName"
+GameName.Parent = Main
+GameName.AnchorPoint = Vector2.new(0.5, 0)
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(0.5, 0, 0, 40)
+GameName.Size = UDim2.new(0, 257, 0, 24)
+GameName.Font = Enum.Font.Gotham
+GameName.Text = "Combat Warriors"
+GameName.TextColor3 = Color3.fromRGB(225, 225, 225)
+GameName.TextSize = 18.000
+GameName.TextWrapped = true
+GameName.TextYAlignment = Enum.TextYAlignment.Top
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.AnchorPoint = Vector2.new(0.5, 0)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.5, 0, 0, 8)
+Title.Size = UDim2.new(0, 224, 0, 31)
+Title.Font = Enum.Font.GothamBlack
+Title.Text = "GAME DETECTED"
+Title.TextColor3 = Color3.fromRGB(225, 225, 225)
+Title.TextSize = 20.000
+Title.TextWrapped = true
+
+Yes.Name = "Yes"
+Yes.Parent = Main
+Yes.Active = true
+Yes.AnchorPoint = Vector2.new(0.5, 0.5)
+Yes.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+Yes.Position = UDim2.new(0.300000012, 0, 0.600000024, 0)
+Yes.Size = UDim2.new(0, 120, 0, 30)
+
+TextLabel.Parent = Yes
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Load"
+TextLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+TextLabel.TextSize = 20.000
+TextLabel.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = Yes
+
+Button.Name = "Button"
+Button.Parent = Yes
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 1.000
+Button.Size = UDim2.new(1, 0, 1, 0)
+Button.Font = Enum.Font.SourceSans
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+No.Name = "No"
+No.Parent = Main
+No.Active = true
+No.AnchorPoint = Vector2.new(0.5, 0.5)
+No.BackgroundColor3 = Color3.fromRGB(144, 0, 0)
+No.Position = UDim2.new(0.699999988, 0, 0.600000024, 0)
+No.Size = UDim2.new(0, 120, 0, 30)
+
+TextLabel_2.Parent = No
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Close"
+TextLabel_2.TextColor3 = Color3.fromRGB(225, 225, 225)
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = No
+
+Button_2.Name = "Button"
+Button_2.Parent = No
+Button_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button_2.BackgroundTransparency = 1.000
+Button_2.Size = UDim2.new(1, 0, 1, 0)
+Button_2.Font = Enum.Font.SourceSans
+Button_2.Text = ""
+Button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.TextSize = 14.000
+
+Shadow.Name = "Shadow"
+Shadow.Parent = Loader
+Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow.BackgroundTransparency = 1.000
+Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow.Size = UDim2.new(1, 55, 1, 55)
+Shadow.ZIndex = 0
+
+ImageLabel.Parent = Shadow
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel.ZIndex = 0
+ImageLabel.Image = "http://www.roblox.com/asset/?id=11335809522"
+ImageLabel.ImageColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.ImageTransparency = 0.550
+ImageLabel.ScaleType = Enum.ScaleType.Slice
+ImageLabel.SliceCenter = Rect.new(60, 60, 360, 360)
+
+task.wait(2)
+
+--// SERVICES
+local TweenService = game:GetService('TweenService')
+
+--// CONSTANTS
+local Camera = workspace.CurrentCamera
+local Games = {
+	[11328699205] = 'hub'
+}
+
+--// VALUES
+local supported = Games[game.PlaceId] or false 
+
+--// OBJECTS
+local Blur = Instance.new('BlurEffect', game.Lighting)
+Blur.Size = 0
+
+--// MISC
+local connection1 = nil
+local connection2 = nil
+
+--// MAIN LOADER
+if supported then 
+	GameName.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	GameThumbnail.Image = 'https://www.roblox.com/asset-thumbnail/image?assetId=' .. game.PlaceId .. '&width=768&height=432&format=png'
+	
+	local fov = Camera.FieldOfView
+	
+	TweenService:Create(Camera, TweenInfo.new(0.2), { FieldOfView = 90 }):Play()
+	TweenService:Create(Blur, TweenInfo.new(0.2), { Size = 15 }):Play()
+	
+	Unity.Enabled = true
+	
+	connection1 = Button.MouseButton1Click:Connect(function()
+		TweenService:Create(Camera, TweenInfo.new(0.2), { FieldOfView = fov }):Play()
+		TweenService:Create(Blur, TweenInfo.new(0.2), { Size = 0 }):Play()
+		Unity.Enabled = false
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/revexploits/' .. supported))()
+		connection1:Disconnect()
+	end)
+	
+	connection2 = Button_2.MouseButton1Click:Connect(function()
+		TweenService:Create(Camera, TweenInfo.new(0.2), { FieldOfView = fov }):Play()
+		TweenService:Create(Blur, TweenInfo.new(0.2), { Size = 0 }):Play()
+		Unity.Enabled = false
+		connection1:Disconnect()
+	end)
+end
